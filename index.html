@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Lapse | Voice Note Time Capsule</title>
+        <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            teal: {
+                                500: "#14b8a6",
+                                600: "#0d9488",
+                            },
+                            slate: {
+                                50: "#f8fafc",
+                                100: "#f1f5f9",
+                                200: "#e2e8f0",
+                                800: "#1e293b",
+                                900: "#0f172a",
+                            },
+                        },
+                        fontFamily: {
+                            sans: ["Inter", "sans-serif"],
+                        },
+                    },
+                },
+            };
+        </script>
+        <style>
+            .gradient-bg {
+                background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            }
+            .wave-animation {
+                animation: wave 3s ease-in-out infinite;
+            }
+            @keyframes wave {
+                0%,
+                100% {
+                    transform: translateY(0);
+                }
+                50% {
+                    transform: translateY(-5px);
+                }
+            }
+            .cta-button {
+                transition: transform 0.2s, box-shadow 0.2s;
+            }
+            .cta-button:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+                    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            }
+        </style>
+    </head>
+    <body class="font-sans text-slate-800 bg-slate-50">
+        <!-- Navbar -->
+        <nav
+            class="py-4 px-6 md:px-12 flex items-center justify-between bg-white shadow-sm sticky top-0 z-50"
+        >
+            <div class="flex items-center">
+                <div class="flex items-center space-x-2">
+                    <svg
+                        class="w-8 h-8 text-teal-500"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12A6,6 0 0,0 12,6M12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8Z"
+                        />
+                    </svg>
+                    <span class="text-xl font-semibold">Lapse</span>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a
+                    href="#how-it-works"
+                    class="text-sm font-medium hover:text-teal-500 transition-colors"
+                    >How It Works</a
+                >
+                <a
+                    href="#stories"
+                    class="text-sm font-medium hover:text-teal-500 transition-colors"
+                    >Stories</a
+                >
+                <a
+                    href="#insights"
+                    class="text-sm font-medium hover:text-teal-500 transition-colors"
+                    >Insights</a
+                >
+                <a
+                    href="#pricing"
+                    class="text-sm font-medium hover:text-teal-500 transition-colors"
+                    >Pricing</a
+                >
+            </div>
+            <div>
+                <a
+                    href="#signup"
+                    class="text-sm font-medium px-4 py-2 rounded-full bg-teal-500 text-white hover:bg-teal-600 transition-colors"
+                    >Sign Up</a
+                >
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section
+            class="gradient-bg px-6 py-20 md:py-32 md:px-20 flex flex-col md:flex-row items-center"
+        >
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                    Let Your Future Self Do the Talking
+                </h1>
+                <p
+                    class="text-lg md:text-xl mb-8 text-slate-700 leading-relaxed"
+                >
+                    Turn monthly voice notes into a time capsule. Hear your
+                    growth, spot hidden patterns, and laugh at what used to keep
+                    you up at night.
+                </p>
+                <div
+                    class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4"
+                >
+                    <button
+                        class="cta-button px-8 py-3 bg-teal-500 text-white rounded-md font-medium shadow-md flex items-center justify-center"
+                    >
+                        Claim Your Free Month
+                        <svg
+                            class="ml-2 w-5 h-5"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M9 5l7 7-7 7"
+                            ></path>
+                        </svg>
+                    </button>
+                    <a
+                        href="#how-it-works"
+                        class="flex items-center justify-center px-6 py-3 text-teal-600 hover:text-teal-700 font-medium"
+                    >
+                        How it works
+                        <svg
+                            class="ml-2 w-5 h-5"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
+                            ></path>
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                            ></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center md:justify-end relative">
+                <div
+                    class="relative rounded-2xl shadow-2xl bg-white overflow-hidden w-full max-w-md"
+                >
+                    <!-- The "screen" of the phone -->
+                    <div
+                        class="aspect-[9/16] bg-gradient-to-br from-slate-100 to-slate-200 relative"
+                    >
+                        <!-- Sound waves animation -->
+                        <div
+                            class="absolute inset-0 flex items-center justify-center"
+                        >
+                            <div
+                                class="relative h-40 w-64 flex items-center justify-around"
+                            >
+                                <div
+                                    class="wave-animation bg-teal-300 w-2 h-12 rounded-full opacity-70"
+                                ></div>
+                                <div
+                                    class="wave-animation bg-teal-400 w-2 h-20 rounded-full opacity-80"
+                                    style="animation-delay: 0.1s"
+                                ></div>
+                                <div
+                                    class="wave-animation bg-teal-500 w-2 h-32 rounded-full"
+                                    style="animation-delay: 0.2s"
+                                ></div>
+                                <div
+                                    class="wave-animation bg-teal-400 w-2 h-24 rounded-full opacity-80"
+                                    style="animation-delay: 0.3s"
+                                ></div>
+                                <div
+                                    class="wave-animation bg-teal-300 w-2 h-16 rounded-full opacity-70"
+                                    style="animation-delay: 0.4s"
+                                ></div>
+                            </div>
+                        </div>
+
+                        <!-- Time markers -->
+                        <div class="absolute bottom-12 left-0 right-0 px-6">
+                            <div
+                                class="h-1 bg-white bg-opacity-30 rounded-full"
+                            ></div>
+                            <div
+                                class="flex justify-between mt-2 text-xs text-white text-opacity-70"
+                            >
+                                <span>2023</span>
+                                <span>Today</span>
+                                <span>2025</span>
+                            </div>
+                        </div>
+
+                        <!-- Record button -->
+                        <div
+                            class="absolute bottom-6 left-0 right-0 flex justify-center"
+                        >
+                            <div
+                                class="h-14 w-14 rounded-full bg-white flex items-center justify-center shadow-lg"
+                            >
+                                <div
+                                    class="h-10 w-10 rounded-full bg-teal-500 flex items-center justify-center pulse-animation"
+                                >
+                                    <svg
+                                        class="w-6 h-6 text-white"
+                                        fill="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            d="M12,2A3,3 0 0,1 15,5V11A3,3 0 0,1 12,14A3,3 0 0,1 9,11V5A3,3 0 0,1 12,2M19,11C19,14.53 16.39,17.44 13,17.93V21H11V17.93C7.61,17.44 5,14.53 5,11H7A5,5 0 0,0 12,16A5,5 0 0,0 17,11H19Z"
+                                        />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem/Solution Section -->
+        <section id="how-it-works" class="py-20 px-6 md:px-20">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
+                Life Moves Fast. Your Growth Deserves a Diary.
+            </h2>
+
+            <div class="flex flex-col md:flex-row items-center mb-16">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-12">
+                    <div class="relative rounded-xl overflow-hidden shadow-lg">
+                        <div class="grid grid-cols-2 h-full">
+                            <!-- Left side - the problem -->
+                            <div
+                                class="bg-slate-100 p-6 flex flex-col items-center justify-center space-y-4"
+                            >
+                                <div
+                                    class="flex flex-wrap gap-2 justify-center"
+                                >
+                                    <div
+                                        class="bg-yellow-100 p-3 rounded rotate-3 shadow text-sm text-slate-700"
+                                    >
+                                        Call Mom
+                                    </div>
+                                    <div
+                                        class="bg-red-100 p-3 rounded -rotate-6 shadow text-sm text-slate-700 line-through"
+                                    >
+                                        Meeting notes
+                                    </div>
+                                    <div
+                                        class="bg-blue-100 p-3 rounded rotate-6 shadow text-sm text-slate-700"
+                                    >
+                                        Forgot again!
+                                    </div>
+                                </div>
+                                <div class="mt-4 text-center">
+                                    <p class="text-sm text-slate-600 italic">
+                                        Important moments lost in chaos...
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Right side - the solution -->
+                            <div
+                                class="bg-white p-6 flex flex-col items-center justify-center"
+                            >
+                                <div class="w-full max-w-xs">
+                                    <div
+                                        class="h-48 border border-slate-200 rounded-lg p-4 bg-gradient-to-br from-teal-50 to-white"
+                                    >
+                                        <h4
+                                            class="text-sm font-medium mb-2 text-teal-600"
+                                        >
+                                            Your Timeline
+                                        </h4>
+                                        <div class="space-y-3">
+                                            <div class="flex items-center">
+                                                <div
+                                                    class="h-2 w-2 rounded-full bg-teal-500 mr-2"
+                                                ></div>
+                                                <span class="text-xs"
+                                                    >First Job</span
+                                                >
+                                                <div class="ml-auto">
+                                                    <svg
+                                                        class="w-4 h-4 text-teal-500"
+                                                        fill="currentColor"
+                                                        viewBox="0 0 24 24"
+                                                    >
+                                                        <path
+                                                            d="M12,2A3,3 0 0,1 15,5V11A3,3 0 0,1 12,14A3,3 0 0,1 9,11V5A3,3 0 0,1 12,2Z"
+                                                        />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="flex items-center">
+                                                <div
+                                                    class="h-2 w-2 rounded-full bg-teal-500 mr-2"
+                                                ></div>
+                                                <span class="text-xs"
+                                                    >Big Breakup</span
+                                                >
+                                                <div class="ml-auto">
+                                                    <svg
+                                                        class="w-4 h-4 text-teal-500"
+                                                        fill="currentColor"
+                                                        viewBox="0 0 24 24"
+                                                    >
+                                                        <path
+                                                            d="M12,2A3,3 0 0,1 15,5V11A3,3 0 0,1 12,14A3,3 0 0,1 9,11V5A3,3 0 0,1 12,2Z"
+                                                        />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="flex items-center">
+                                                <div
+                                                    class="h-2 w-2 rounded-full bg-teal-500 mr-2"
+                                                ></div>
+                                                <span class="text-xs"
+                                                    >Eureka Moment</span
+                                                >
+                                                <div class="ml-auto">
+                                                    <svg
+                                                        class="w-4 h-4 text-teal-500"
+                                                        fill="currentColor"
+                                                        viewBox="0 0 24 24"
+                                                    >
+                                                        <path
+                                                            d="M12,2A3,3 0 0,1 15,5V11A3,3 0 0,1 12,14A3,3 0 0,1 9,11V5A3,3 0 0,1 12,2Z"
+                                                        />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:w-1/2 md:pl-12">
+                    <div class="space-y-8">
+                        <div class="flex">
+                            <div
+                                class="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-red-100 text-red-600"
+                            >
+                                ❌
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-semibold mb-2">
+                                    Lost in the noise of daily life
+                                </h3>
+                                <p class="text-slate-600">
+                                    Studies show we forget 80% of pivotal
+                                    moments within 2 years.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex">
+                            <div
+                                class="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-green-100 text-green-600"
+                            >
+                                ✅
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-semibold mb-2">
+                                    Lapse quietly connects the dots
+                                </h3>
+                                <p class="text-slate-600">
+                                    Spot how your 'terrified' becomes 'thriving'
+                                    over time.
+                                </p>
+                            </div>
+                        </div>
+
+                        <button
+                            class="cta-button w-full sm:w-auto px-8 py-3 bg-teal-500 text-white rounded-md font-medium shadow-md mt-8 flex items-center justify-center"
+                        >
+                            Save Your Story Now
+                            <svg
+                                class="ml-2 w-5 h-5"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M9 5l7 7-7 7"
+                                ></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="stories" class="bg-slate-50 py-20 px-6 md:px-20">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">
+                Don't Just Take Our Word For It
+            </h2>
+            <p class="text-lg text-center text-slate-600 mb-16">
+                We don't do 'testimonials.' We call these Audio Postcards From
+                the Future.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div
+                    class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+                >
+                    <div class="p-6 space-y-4">
+                        <div
+                            class="w-full h-20 bg-slate-100 rounded-md flex items-center justify-center mb-6"
+                        >
+                            <div class="flex space-x-1">
+                                <div
+                                    class="w-1 h-3 bg-teal-300 rounded-full"
+                                ></div>
+                                <div
+                                    class="w-1 h-5 bg-teal-400 rounded-full"
+                                ></div>
+                                <div
+                                    class="w-1 h-8 bg-teal-500 rounded-full"
+                                ></div>
+                                <div
+                                    class="w-1 h-12 bg-teal-600 rounded-full"
+                                ></div>
+                                <div
+                                    class="w-1 h-8 bg-teal-500 rounded-full"
+                                ></div>
+                                <div
+                                    class="w-1 h-5 bg-teal-400 rounded-full"
+                                ></div>
+                                <div
+                                    class="w-1 h-3 bg-teal-300 rounded-full"
+                                ></div>
+                            </div>
+                        </div>
+                        <button
+                            class="w-full flex items-center justify-center py-2 px-4 rounded-full border border-teal-500 text-teal-500 hover:bg-teal-50 transition-colors"
+                        >
+                            <svg
+                                class="w-5 h-5 mr-2"
+                                fill="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+                            </svg>
+                            Play Audio
+                        </button>
+
+                        <div>
+                            <p class="italic text-slate-600 mb-4">
+                                "Hearing my voice shake about quitting my job...
+                                then hearing myself two years later say, 'Best
+                                decision ever'? Chills."
+                            </p>
+                            <div class="flex items-center">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 font-semibold"
+                                >
+                                    A
+                                </div>
+                                <div class="ml-3">
+                                    <p class="font-medium">Alex, 31</p>
+                                    <p class="text-sm text-slate-500">
+                                        Using Lapse for 2+ years
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div
+                    class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+                >
+                    <div class="p-6 space-y-4">
+                        <div
+                            class="w-full h-20 bg-slate-100 rounded-md flex items-center justify-center mb-6"
+                        >
+                            <div class="flex space-x-1">
+                                <div
+                                    class="w-1 h-5 bg-teal-300 rounded-full"
+                                ></div>
+                                <div
+                                    class="w-1 h-8 bg-teal-400 rounded-full"
+                                ></div>
+                                <div
+                                    class="w-1 h-6 bg-teal-500 rounded-full"
+                                ></div>
+                                <div
+                                    class="w-1 h-10 bg-teal-600 rounded-full"
+                                ></div>
+                                <div
+                                    class="w-1 h-7 bg-teal-500 rounded-full"
+                                ></div>
+                                <div
+                                    class="w-1 h-4 bg-teal-400 rounded-full"
+                                ></div>
+                                <div
+                                    class="w-1 h-6 bg-teal-300 rounded-full"
+                                ></div>
+                            </div>
+                        </div>
+                        <button
+                            class="w-full flex items-center justify-center py-2 px-4 rounded-full border border-teal-500 text-teal-500 hover:bg-teal-50 transition-colors"
+                        >
+                            <svg
+                                class="w-5 h-5 mr-2"
+                                fill="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+                            </svg>
+                            Play Audio
+                        </button>
+
+                        <div>
+                            <p class="italic text-slate-600 mb-4">
+                                "We added our toddler's giggles to Lapse. Now
+                                we've got a 'greatest hits' reel for her 18th
+                                birthday."
+                            </p>
+                            <div class="flex items-center">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 font-semibold"
+                                >
+                                    R
+                                </div>
+                                <div class="ml-3">
+                                    <p class="font-medium">The Rivera Family</p>
+                                    <p class="text-sm text-slate-500">
+                                        Parents & Lapse enthusiasts
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div
+                    class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+                >
+                    <div class="p-6 space-y-4">
+                        <div
+                            class="w-full h-20 bg-slate-100 rounded-md flex items-center justify-center mb-6"
+                        >
+                            <div class="flex space-x-1">
+                                <div
+                                    class="w-1 h-4 bg-teal-300 rounded-full"
+                                ></div>
+                                <div
+                                    class="w-1 h-6 bg-teal-400 rounded-full"
+                                ></div>
+                                <div
+                                    class="w-1 h-9 bg-teal-500 rounded-full"
+                                ></div>
+                                <div
+                                    class="w-1 h-7 bg-teal-600 rounded-full"
+                                ></div>
+                                <div
+                                    class="w-1 h-10 bg-teal-500 rounded-full"
+                                ></div>
+                                <div
+                                    class="w-1 h-6 bg-teal-400 rounded-full"
+                                ></div>
+                                <div
+                                    class="w-1 h-4 bg-teal-300 rounded-full"
+                                ></div>
+                            </div>
+                        </div>
+                        <button
+                            class="w-full flex items-center justify-center py-2 px-4 rounded-full border border-teal-500 text-teal-500 hover:bg-teal-50 transition-colors"
+                        >
+                            <svg
+                                class="w-5 h-5 mr-2"
+                                fill="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+                            </svg>
+                            Play Audio
+                        </button>
+
+                        <div>
+                            <p class="italic text-slate-600 mb-4">
+                                "I'm a therapist, and I recommend Lapse to
+                                clients. It's like a diary that listens back."
+                            </p>
+                            <div class="flex items-center">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 font-semibold"
+                                >
+                                    M
+                                </div>
+                                <div class="ml-3">
+                                    <p class="font-medium">Dr. Maya, PhD</p>
+                                    <p class="text-sm text-slate-500">
+                                        Clinical Psychologist
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <button
+                    class="cta-button px-8 py-3 bg-teal-500 text-white rounded-md font-medium shadow-md flex items-center justify-center mx-auto"
+                >
+                    Send Your First Postcard
+                    <svg
+                        class="ml-2 w-5 h-5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 5l7 7-7 7"
+                        ></path>
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- AI Insights Section -->
+        <section id="insights" class="py-20 px-6 md:px-20 bg-white">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
+                What Will Your Future Self Remember?
+            </h2>
+
+            <div
+                class="max-w-4xl mx-auto bg-white rounded-xl shadow-xl overflow-hidden"
+            >
+                <!-- Timeline visualization -->
+                <div class="relative p-8">
+                    <!-- Timeline axis -->
+                    <div
+                        class="h-1 w-full bg-slate-200 absolute top-20 left-0 right-0"
+                    ></div>
+
+                    <!-- Timeline points with tooltips -->
+                    <div class="relative h-44 pt-10">
+                        <!-- 2019 -->
+                        <div
+                            class="absolute left-[10%] top-10 flex flex-col items-center"
+                        >
+                            <div
+                                class="w-4 h-4 rounded-full bg-teal-500 mb-2 z-10"
+                            ></div>
+                            <p class="text-sm font-medium mb-1">2019</p>
+                            <div
+                                class="w-56 p-4 bg-white shadow-md rounded-md border border-slate-200 mt-2"
+                            >
+                                <p class="text-sm text-slate-700">
+                                    You said
+                                    <span class="font-semibold">"anxious"</span>
+                                    12 times this year.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- 2022 -->
+                        <div
+                            class="absolute left-[40%] top-10 flex flex-col items-center"
+                        >
+                            <div
+                                class="w-4 h-4 rounded-full bg-teal-500 mb-2 z-10"
+                            ></div>
+                            <p class="text-sm font-medium mb-1">2022</p>
+                            <div
+                                class="w-56 p-4 bg-white shadow-md rounded-md border border-slate-200 mt-2"
+                            >
+                                <p class="text-sm text-slate-700">
+                                    First mention of your
+                                    <span class="font-semibold"
+                                        >partner's name</span
+                                    >
+                                    in recordings.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- 2024 -->
+                        <div
+                            class="absolute left-[70%] top-10 flex flex-col items-center"
+                        >
+                            <div
+                                class="w-4 h-4 rounded-full bg-teal-500 mb-2 z-10"
+                            ></div>
+                            <p class="text-sm font-medium mb-1">2024</p>
+                            <div
+                                class="w-56 p-4 bg-white shadow-md rounded-md border border-slate-200 mt-2"
+                            >
+                                <p class="text-sm text-slate-700">
+                                    Confidence bloomed!
+                                    <span class="font-semibold">"Proud"</span>
+                                    is now your most-used word.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- 2026 (blurred) -->
+                        <div
+                            class="absolute left-[90%] top-10 flex flex-col items-center"
+                        >
+                            <div
+                                class="w-4 h-4 rounded-full bg-slate-300 mb-2 z-10"
+                            ></div>
+                            <p class="text-sm font-medium text-slate-400 mb-1">
+                                2026
+                            </p>
+                            <div
+                                class="w-56 p-4 bg-white shadow-md rounded-md border border-slate-200 mt-2 blur-sm hover:blur-none transition-all"
+                            >
+                                <p class="text-sm text-slate-700">
+                                    Your 2026 self will cringe at this… then
+                                    thank you.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-gradient-to-br from-teal-50 to-blue-50 p-8 text-center"
+                >
+                    <button
+                        class="cta-button px-8 py-3 bg-teal-500 text-white rounded-md font-medium shadow-md flex items-center justify-center mx-auto"
+                    >
+                        Uncover Your Patterns
+                        <svg
+                            class="ml-2 w-5 h-5"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M9 5l7 7-7 7"
+                            ></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personalized Nudge Section -->
+        <section class="py-16 px-6 md:px-20 bg-slate-50">
+            <div class="max-w-2xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    Pssst… Journals collect dust. This one talks back.
+                </h2>
+                <p class="text-lg text-slate-600 mb-10">
+                    Your growth is quieter than your fears. Let's amplify it.
+                </p>
+
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <p class="text-sm text-slate-500 mb-2">
+                        Create your first voice note:
+                    </p>
+                    <div class="flex items-center">
+                        <input
+                            type="text"
+                            placeholder="First day at my new job 🎤"
+                            class="flex-grow p-3 border-2 border-teal-200 rounded-l-md focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                        />
+                        <button
+                            class="bg-teal-500 text-white p-3 rounded-r-md hover:bg-teal-600 transition-colors"
+                        >
+                            <svg
+                                class="w-6 h-6"
+                                fill="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M12,2A3,3 0 0,1 15,5V11A3,3 0 0,1 12,14A3,3 0 0,1 9,11V5A3,3 0 0,1 12,2M19,11C19,14.53 16.39,17.44 13,17.93V21H11V17.93C7.61,17.44 5,14.53 5,11H7A5,5 0 0,0 12,16A5,5 0 0,0 17,11H19Z"
+                                />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scarcity & Social Proof -->
+        <section class="py-16 px-6 md:px-20 bg-white">
+            <div class="max-w-3xl mx-auto">
+                <div
+                    class="bg-gradient-to-br from-slate-50 to-slate-100 p-8 md:p-12 rounded-2xl shadow-lg"
+                >
+                    <h2 class="text-2xl md:text-3xl font-bold mb-8 text-center">
+                        Join 892 Life Captains <br /><span class="text-teal-500"
+                            >(Only 108 Free Slots Left This Month)</span
+                        >
+                    </h2>
+
+                    <div
+                        class="flex flex-col md:flex-row justify-between items-center mb-10"
+                    >
+                        <div
+                            class="bg-white p-4 rounded-lg shadow-md mb-6 md:mb-0 flex items-center space-x-3"
+                        >
+                            <div
+                                class="h-3 w-3 bg-green-500 rounded-full animate-pulse"
+                            ></div>
+                            <p class="text-sm font-medium">
+                                <span id="recent-joins">3</span> people joined
+                                in the last hour!
+                            </p>
+                        </div>
+
+                        <div
+                            class="bg-white p-4 rounded-lg shadow-md flex items-center space-x-3"
+                        >
+                            <svg
+                                class="w-5 h-5 text-red-500"
+                                fill="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z"
+                                />
+                            </svg>
+                            <p class="text-sm font-medium">
+                                Claim within
+                                <span
+                                    id="countdown-timer"
+                                    class="text-red-500 font-bold"
+                                    >4:32</span
+                                >
+                                → Get 3 bonus credits!
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <button
+                            class="cta-button px-8 py-4 bg-teal-500 text-white rounded-md font-medium shadow-md inline-flex items-center"
+                        >
+                            Claim Your Spot Now
+                            <svg
+                                class="ml-2 w-5 h-5"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M9 5l7 7-7 7"
+                                ></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust & Privacy -->
+        <section class="py-16 px-6 md:px-20 bg-slate-50">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    Your Secrets Stay Yours. Pinky Promise.
+                </h2>
+                <p class="text-lg text-slate-600 mb-12 max-w-2xl mx-auto">
+                    We take your privacy seriously - your memories are encrypted
+                    and only accessible to you.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-md transition-transform hover:transform hover:scale-105"
+                    >
+                        <div class="text-4xl mb-4">🔒</div>
+                        <h3 class="text-xl font-semibold mb-2">
+                            Bank-level encryption
+                        </h3>
+                        <p class="text-slate-600">
+                            Your voice notes are encrypted using the same
+                            technology used by financial institutions.
+                        </p>
+                    </div>
+
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-md transition-transform hover:transform hover:scale-105"
+                    >
+                        <div class="text-4xl mb-4">🎧</div>
+                        <h3 class="text-xl font-semibold mb-2">
+                            Private until YOU hit share
+                        </h3>
+                        <p class="text-slate-600">
+                            You control who hears what. Share specific memories,
+                            or keep them all to yourself.
+                        </p>
+                    </div>
+
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-md transition-transform hover:transform hover:scale-105"
+                    >
+                        <div class="text-4xl mb-4">🤝</div>
+                        <h3 class="text-xl font-semibold mb-2">
+                            No data selling, ever
+                        </h3>
+                        <p class="text-slate-600">
+                            We don't sell your data or use it for advertising.
+                            Your memories belong only to you.
+                        </p>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white p-8 rounded-xl shadow-md max-w-2xl mx-auto"
+                >
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0">
+                            <div
+                                class="w-12 h-12 rounded-full bg-teal-100 flex items-center justify-center"
+                            >
+                                <svg
+                                    class="w-6 h-6 text-teal-600"
+                                    fill="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        d="M19,3H5C3.9,3 3,3.9 3,5V19C3,20.1 3.9,21 5,21H19C20.1,21 21,20.1 21,19V5C21,3.9 20.1,3 19,3M19,19H5V5H19V19M17,12C17,14.76 14.76,17 12,17C9.24,17 7,14.76 7,12C7,9.24 9.24,7 12,7C12.86,7 13.66,7.24 14.36,7.65L15.41,6.6C14.38,5.93 13.23,5.5 12,5.5C8.42,5.5 5.5,8.42 5.5,12C5.5,15.58 8.42,18.5 12,18.5C15.58,18.5 18.5,15.58 18.5,12H17M16.5,7.5L18,9L16.5,10.5V7.5Z"
+                                    />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <p class="italic text-slate-700 mb-4">
+                                "I'm a therapist, and I recommend Lapse to
+                                clients. It's like a diary that listens back.
+                                The privacy features give my clients peace of
+                                mind that their thoughts are protected."
+                            </p>
+                            <div class="flex items-center">
+                                <p class="font-medium">Dr. Maya, PhD</p>
+                                <span class="mx-2 text-slate-300">|</span>
+                                <p class="text-sm text-slate-500">
+                                    Clinical Psychologist
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-12">
+                    <button
+                        class="cta-button px-8 py-3 bg-teal-500 text-white rounded-md font-medium shadow-md flex items-center justify-center mx-auto"
+                    >
+                        Start Your Private Journey
+                        <svg
+                            class="ml-2 w-5 h-5"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M9 5l7 7-7 7"
+                            ></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-slate-800 text-white py-12 px-6 md:px-20">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                    <div>
+                        <div class="flex items-center space-x-2 mb-6">
+                            <svg
+                                class="w-8 h-8 text-teal-400"
+                                fill="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12A6,6 0 0,0 12,6M12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8Z"
+                                />
+                            </svg>
+                            <span class="text-xl font-semibold">Lapse</span>
+                        </div>
+                        <p class="text-slate-400 mb-4">
+                            Your voice time capsule, preserving memories that
+                            matter.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a
+                                href="#"
+                                class="text-slate-400 hover:text-white transition-colors"
+                            >
+                                <svg
+                                    class="w-6 h-6"
+                                    fill="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z"
+                                    />
+                                </svg>
+                            </a>
+                            <a
+                                href="#"
+                                class="text-slate-400 hover:text-white transition-colors"
+                            >
+                                <svg
+                                    class="w-6 h-6"
+                                    fill="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z"
+                                    />
+                                </svg>
+                            </a>
+                            <a
+                                href="#"
+                                class="text-slate-400 hover:text-white transition-colors"
+                            >
+                                <svg
+                                    class="w-6 h-6"
+                                    fill="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"
+                                    />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Product</h3>
+                        <ul class="space-y-2">
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-slate-400 hover:text-white transition-colors"
+                                    >Features</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-slate-400 hover:text-white transition-colors"
+                                    >Pricing</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-slate-400 hover:text-white transition-colors"
+                                    >Voice Analytics</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-slate-400 hover:text-white transition-colors"
+                                    >Mobile App</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-slate-400 hover:text-white transition-colors"
+                                    >Integration</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Company</h3>
+                        <ul class="space-y-2">
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-slate-400 hover:text-white transition-colors"
+                                    >About Us</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-slate-400 hover:text-white transition-colors"
+                                    >Blog</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-slate-400 hover:text-white transition-colors"
+                                    >Careers</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-slate-400 hover:text-white transition-colors"
+                                    >Press Kit</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-slate-400 hover:text-white transition-colors"
+                                    >Contact</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Support</h3>
+                        <ul class="space-y-2">
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-slate-400 hover:text-white transition-colors"
+                                    >Help Center</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-slate-400 hover:text-white transition-colors"
+                                    >Privacy Policy</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-slate-400 hover:text-white transition-colors"
+                                    >Terms of Service</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-slate-400 hover:text-white transition-colors"
+                                    >Cookie Policy</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-slate-400 hover:text-white transition-colors"
+                                    >Status</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div
+                    class="pt-8 mt-8 border-t border-slate-700 flex flex-col md:flex-row justify-between items-center"
+                >
+                    <p class="text-slate-400 text-sm mb-4 md:mb-0">
+                        © 2025 Lapse. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a
+                            href="#"
+                            class="text-slate-400 hover:text-white text-sm transition-colors"
+                            >Privacy</a
+                        >
+                        <a
+                            href="#"
+                            class="text-slate-400 hover:text-white text-sm transition-colors"
+                            >Terms</a
+                        >
+                        <a
+                            href="#"
+                            class="text-slate-400 hover:text-white text-sm transition-colors"
+                            >Cookies</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Sticky Footer CTA -->
+        <div
+            class="fixed bottom-0 left-0 right-0 bg-white shadow-lg py-4 px-6 flex items-center justify-between z-40"
+        >
+            <p class="text-slate-700 hidden md:block">
+                Don't keep future you waiting. They're rooting for you.
+            </p>
+            <button
+                class="cta-button w-full md:w-auto px-6 py-3 bg-teal-500 text-white rounded-md font-medium shadow-md flex items-center justify-center ml-auto"
+            >
+                Record Your First Note
+                <svg
+                    class="ml-2 w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                    ></path>
+                </svg>
+                <span class="ml-1 text-sm">2 mins ⏰</span>
+            </button>
+        </div>
+
+        <!-- JavaScript -->
+        <script>
+            // Simulate countdown timer
+            let seconds = 272; // 4:32 in seconds
+            const countdownEl = document.getElementById("countdown-timer");
+
+            function updateCountdown() {
+                const mins = Math.floor(seconds / 60);
+                const secs = seconds % 60;
+                countdownEl.textContent = `${mins}:${secs
+                    .toString()
+                    .padStart(2, "0")}`;
+                if (seconds > 0) {
+                    seconds--;
+                    setTimeout(updateCountdown, 1000);
+                } else {
+                    countdownEl.textContent = "Expired";
+                }
+            }
+
+            // Simulate recent joins
+            function updateRecentJoins() {
+                const joinsEl = document.getElementById("recent-joins");
+                const currentJoins = parseInt(joinsEl.textContent);
+                const randomChange = Math.random() > 0.7 ? 1 : 0; // 30% chance of increasing
+                joinsEl.textContent = currentJoins + randomChange;
+                setTimeout(updateRecentJoins, 60000); // Update every minute
+            }
+
+            // Start the updates
+            updateCountdown();
+            updateRecentJoins();
+        </script>
+    </body>
+</html>
