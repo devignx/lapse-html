@@ -1,4 +1,4 @@
-<!doctypehtml>
+<!DOCTYPE html>
 <html lang=en>
 <meta charset=UTF-8>
 <meta content="width=device-width,initial-scale=1" name=viewport>
@@ -6,104 +6,191 @@
 <script src=https://unpkg.com/@tailwindcss/browser@4></script>
 <link href=https://fonts.googleapis.com rel=preconnect>
 <link href=https://fonts.gstatic.com rel=preconnect crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel=stylesheet>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+    rel=stylesheet>
 <script>
-    tailwind.config={theme:{extend:{colors:{teal:{500:"#14b8a6",600:"#0d9488"},slate:{50:"#f8fafc",100:"#f1f5f9",200:"#e2e8f0",800:"#1e293b",900:"#0f172a"}},fontFamily:{sans:["Inter","sans-serif"]}}}}
+    tailwind.config = { theme: { extend: { colors: { teal: { 500: "#14b8a6", 600: "#0d9488" }, slate: { 50: "#f8fafc", 100: "#f1f5f9", 200: "#e2e8f0", 800: "#1e293b", 900: "#0f172a" } }, fontFamily: { sans: ["Inter", "sans-serif"] } } } }
 </script>
 <style>
-    body{font-family:"Plus Jakarta Sans",sans-serif}.gradient-bg{background:linear-gradient(135deg,#f0f9ff 0,#e0f2fe 100%)}.wave-animation{animation:wave 3s ease-in-out infinite}@keyframes wave{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}.cta-button{transition:transform .2s,box-shadow .2s}.cta-button:hover{transform:translateY(-2px);box-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -2px rgba(0,0,0,.05)}.no-scrollbar{-ms-overflow-style:none;scrollbar-width:none}
+    body {
+        font-family: "Plus Jakarta Sans", sans-serif
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .gradient-bg {
+        background: linear-gradient(135deg, #f0f9ff 0, #e0f2fe 100%)
+    }
+
+    .wave-animation {
+        animation: wave 3s ease-in-out infinite
+    }
+
+    @keyframes wave {
+
+        0%,
+        100% {
+            transform: translateY(0)
+        }
+
+        50% {
+            transform: translateY(-5px)
+        }
+    }
+
+    .cta-button {
+        transition: transform .2s, box-shadow .2s
+    }
+
+    .cta-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -2px rgba(0, 0, 0, .05)
+    }
+
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none
+    }
 </style>
 
-<body class="bg-slate-50 text-slate-800">
-    <nav class="flex items-center bg-white justify-between px-6 py-4 md:px-12 shadow-sm sticky top-0 z-50">
-        <div class="flex items-center">
-            <div class="flex items-center space-x-2">
+<body class="bg-slate-50 ">
+    <nav class="flex items-center  bg-white justify-between px-6 py-4 md:px-12 shadow-sm sticky top-0 z-50">
+        <div class="flex items-center ">
+            <div class="flex items-center space-x-2 text-slate-800">
                 <svg class="h-8 w-8 text-teal-500" fill=currentColor viewBox="0 0 24 24">
-                    <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12A6,6 0 0,0 12,6M12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8Z"
-                    />
-                </svg> <span class="font-semibold text-xl">Lapse</span></div>
+                    <path
+                        d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12A6,6 0 0,0 12,6M12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8Z" />
+                </svg>
+                <span class="font-semibold text-xl">Lapse</span>
+            </div>
         </div>
-        <div class="items-center hidden md:flex space-x-8"><a class="text-sm font-medium transition-colors hover:text-teal-500" href=#how-it-works>How It Works</a> <a class="text-sm font-medium transition-colors hover:text-teal-500" href=#stories>Stories</a> <a class="text-sm font-medium transition-colors hover:text-teal-500"
-            href=#insights>Insights</a> <a class="text-sm font-medium transition-colors hover:text-teal-500" href=#pricing>Pricing</a></div>
-        <div><a class="rounded-full bg-teal-500 font-medium hover:bg-teal-600 px-4 py-2 text-sm text-white transition-colors" href=#signup>Sign Up</a></div>
+        <div class="items-center text-white hidden md:flex space-x-8"><a
+                class="text-sm font-medium transition-colors hover:text-teal-500" href=#how-it-works>How It Works</a> <a
+                class="text-sm font-medium transition-colors hover:text-teal-500" href=#stories>Stories</a> <a
+                class="text-sm font-medium transition-colors hover:text-teal-500" href=#insights>Insights</a> <a
+                class="text-sm font-medium transition-colors hover:text-teal-500" href=#pricing>Pricing</a></div>
+        <div>
+            <button class="rounded-full bg-teal-500 font-medium hover:bg-teal-600 px-4 py-2 text-sm text-white "
+                href=#signup>Sign Up
+            </button>
+        </div>
     </nav>
     <section class="flex items-center flex-col md:flex-row gradient-bg md:px-20 md:py-32 px-6 py-20">
         <div class="mb-10 md:mb-0 md:w-1/2">
             <h1 class="font-bold mb-6 leading-tight md:text-5xl text-4xl">Let Your Future Self See & Hear You</h1>
-            <p class="text-slate-700 leading-relaxed mb-8 md:text-xl text-lg">Turn monthly video or audio recordings into a time capsule. Watch your growth, spot hidden patterns, and laugh at what used to keep you up at night.
-                <div class="flex sm:flex-row flex-col sm:space-x-4 sm:space-y-0 space-y-4">
-                    <button class="flex items-center justify-center rounded-md bg-teal-500 cta-button font-medium py-3 shadow-md text-white px-8">Claim Your Free Month
-                        <svg class="h-5 w-5 ml-2" fill=none viewBox="0 0 24 24" stroke=currentColor xmlns=http://www.w3.org/2000/svg>
-                            <path d="M9 5l7 7-7 7" stroke-linecap=round stroke-linejoin=round stroke-width=2></path>
-                        </svg>
-                    </button> <a class="flex items-center justify-center font-medium py-3 px-6 hover:text-teal-700 text-teal-600" href=#how-it-works>How it works <svg class="h-5 w-5 ml-2"fill=none viewBox="0 0 24 24"stroke=currentColor xmlns=http://www.w3.org/2000/svg><path d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"stroke-linecap=round stroke-linejoin=round stroke-width=2></path><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"stroke-linecap=round stroke-linejoin=round stroke-width=2></path></svg></a></div>
+            <p class="text-slate-700 leading-relaxed mb-8 md:text-xl text-lg">Turn monthly video or audio recordings
+                into a time capsule. Watch your growth, spot hidden patterns, and laugh at what used to keep you up at
+                night.
+            <div class="flex sm:flex-row flex-col sm:space-x-4 sm:space-y-0 space-y-4">
+                <button
+                    class="flex items-center justify-center rounded-md bg-teal-500 cta-button font-medium py-3 shadow-md text-white px-8">Claim
+                    Your Free Month
+                    <svg class="h-5 w-5 ml-2" fill=none viewBox="0 0 24 24" stroke=currentColor
+                        xmlns=http://www.w3.org/2000/svg>
+                        <path d="M9 5l7 7-7 7" stroke-linecap=round stroke-linejoin=round stroke-width=2></path>
+                    </svg>
+                </button> <a
+                    class="flex items-center justify-center font-medium py-3 px-6 hover:text-teal-700 text-teal-600"
+                    href=#how-it-works>How it works <svg class="h-5 w-5 ml-2" fill=none viewBox="0 0 24 24"
+                        stroke=currentColor xmlns=http://www.w3.org/2000/svg>
+                        <path
+                            d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
+                            stroke-linecap=round stroke-linejoin=round stroke-width=2></path>
+                        <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap=round stroke-linejoin=round
+                            stroke-width=2></path>
+                    </svg></a>
+            </div>
         </div>
         <div class="flex justify-center md:justify-end md:w-1/2 relative">
             <div class="bg-white max-w-md overflow-hidden relative rounded-2xl shadow-2xl w-full">
                 <div class="relative aspect-[4/3] bg-gradient-to-br from-slate-100 to-slate-200">
                     <div class="flex items-center justify-center absolute inset-0">
                         <svg class="h-20 w-20 text-teal-500 opacity-70" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M17,10.5V7A1,1 0 0,0 16,6H4A1,1 0 0,0 3,7V17A1,1 0 0,0 4,18H16A1,1 0 0,0 17,17V13.5L21,17.5V6.5L17,10.5Z" />
+                            <path
+                                d="M17,10.5V7A1,1 0 0,0 16,6H4A1,1 0 0,0 3,7V17A1,1 0 0,0 4,18H16A1,1 0 0,0 17,17V13.5L21,17.5V6.5L17,10.5Z" />
                         </svg>
                     </div>
                     <div class="bottom-12 absolute left-0 px-6 right-0">
-                        <div class="rounded-full bg-white bg-opacity-30 h-1"></div>
-                        <div class="flex justify-between mt-2 text-opacity-70 text-white text-xs"><span>2023</span> <span>Today</span> <span>2025</span></div>
+                        <div class="rounded-full bg-slate-300 bg-opacity-30 h-1"></div>
+                        <div class="flex justify-between mt-2 text-opacity-70 text-slate-500 text-xs"><span>2023</span>
+                            <span>Today</span> <span>2025</span>
+                        </div>
                     </div>
-                    <div class="flex justify-center absolute bottom-6 left-0 right-0">
+                    <!-- <div class="flex justify-center absolute bottom-6 left-0 right-0">
                         <div class="flex items-center justify-center rounded-full bg-white h-14 shadow-lg w-14">
-                            <div class="flex items-center justify-center rounded-full h-10 w-10 bg-teal-500 pulse-animation">
+                            <div
+                                class="flex items-center justify-center rounded-full h-10 w-10 bg-teal-500 pulse-animation">
                                 <svg class="h-6 w-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                                    <path
+                                        d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
                                 </svg>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
     </section>
     <section class="md:px-20 px-6 py-20" id=how-it-works>
-        <h2 class="text-center font-bold md:text-4xl text-3xl mb-16">Life Moves Fast. Your Growth Deserves a Visual Diary.</h2>
+        <h2 class="text-center font-bold md:text-4xl text-3xl mb-16">Life Moves Fast. Your Growth Deserves a Visual
+            Diary.</h2>
         <div class="flex items-center flex-col md:flex-row mb-16">
             <div class="mb-10 md:mb-0 md:w-1/2 md:pr-12">
                 <div class="rounded-xl overflow-hidden relative shadow-lg">
                     <div class="grid grid-cols-2 h-full">
                         <div class="flex items-center justify-center bg-slate-100 flex-col p-6 space-y-4">
                             <div class="flex justify-center flex-wrap gap-2">
-                                <div class="text-sm text-slate-700 p-3 rounded shadow bg-yellow-100 rotate-3">Call Mom</div>
-                                <div class="text-sm text-slate-700 p-3 rounded shadow -rotate-6 bg-red-100 line-through">Meeting notes</div>
-                                <div class="text-sm text-slate-700 p-3 rounded shadow bg-blue-100 rotate-6">Forgot again!</div>
+                                <div class="text-sm text-slate-700 p-3 rounded shadow bg-yellow-100 rotate-3">Call Mom
+                                </div>
+                                <div
+                                    class="text-sm text-slate-700 p-3 rounded shadow -rotate-6 bg-red-100 line-through">
+                                    Meeting notes</div>
+                                <div class="text-sm text-slate-700 p-3 rounded shadow bg-blue-100 rotate-6">Forgot
+                                    again!</div>
                             </div>
                             <div class="text-center mt-4">
-                                <p class="text-sm italic text-slate-600">Important moments lost in chaos...</div>
+                                <p class="text-sm italic text-slate-600">Important moments lost in chaos...
+                            </div>
                         </div>
                         <div class="flex items-center justify-center bg-white flex-col p-6">
                             <div class="max-w-xs w-full">
-                                <div class="border-slate-200 border p-4 bg-gradient-to-br from-teal-50 h-48 rounded-lg to-white">
+                                <div
+                                    class="border-slate-200 border p-4 bg-gradient-to-br from-teal-50 h-48 rounded-lg to-white">
                                     <h4 class="text-sm font-medium mb-2 text-teal-600">Your Timeline</h4>
                                     <div class=space-y-3>
                                         <div class="flex items-center">
-                                            <div class="rounded-full bg-teal-500 w-2 h-2 mr-2"></div><span class=text-xs>First Job</span>
+                                            <div class="rounded-full bg-teal-500 w-2 h-2 mr-2"></div><span
+                                                class=text-xs>First Job</span>
                                             <div class=ml-auto>
-                                                <svg class="h-4 w-4 text-teal-500" fill="currentColor" viewBox="0 0 24 24">
-                                                    <path d="M17,10.5V7A1,1 0 0,0 16,6H4A1,1 0 0,0 3,7V17A1,1 0 0,0 4,18H16A1,1 0 0,0 17,17V13.5L21,17.5V6.5L17,10.5Z" />
+                                                <svg class="h-4 w-4 text-teal-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M17,10.5V7A1,1 0 0,0 16,6H4A1,1 0 0,0 3,7V17A1,1 0 0,0 4,18H16A1,1 0 0,0 17,17V13.5L21,17.5V6.5L17,10.5Z" />
                                                 </svg>
                                             </div>
                                         </div>
                                         <div class="flex items-center">
-                                            <div class="rounded-full bg-teal-500 w-2 h-2 mr-2"></div><span class=text-xs>Big Breakup</span>
+                                            <div class="rounded-full bg-teal-500 w-2 h-2 mr-2"></div><span
+                                                class=text-xs>Big Breakup</span>
                                             <div class=ml-auto>
-                                                <svg class="h-4 w-4 text-teal-500" fill="currentColor" viewBox="0 0 24 24">
-                                                    <path d="M12,2A3,3 0 0,1 15,5V11A3,3 0 0,1 12,14A3,3 0 0,1 9,11V5A3,3 0 0,1 12,2Z" />
+                                                <svg class="h-4 w-4 text-teal-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12,2A3,3 0 0,1 15,5V11A3,3 0 0,1 12,14A3,3 0 0,1 9,11V5A3,3 0 0,1 12,2Z" />
                                                 </svg>
                                             </div>
                                         </div>
                                         <div class="flex items-center">
-                                            <div class="rounded-full bg-teal-500 w-2 h-2 mr-2"></div><span class=text-xs>Eureka Moment</span>
+                                            <div class="rounded-full bg-teal-500 w-2 h-2 mr-2"></div><span
+                                                class=text-xs>Eureka Moment</span>
                                             <div class=ml-auto>
-                                                <svg class="h-4 w-4 text-teal-500" fill="currentColor" viewBox="0 0 24 24">
-                                                    <path d="M17,10.5V7A1,1 0 0,0 16,6H4A1,1 0 0,0 3,7V17A1,1 0 0,0 4,18H16A1,1 0 0,0 17,17V13.5L21,17.5V6.5L17,10.5Z" />
+                                                <svg class="h-4 w-4 text-teal-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M17,10.5V7A1,1 0 0,0 16,6H4A1,1 0 0,0 3,7V17A1,1 0 0,0 4,18H16A1,1 0 0,0 17,17V13.5L21,17.5V6.5L17,10.5Z" />
                                                 </svg>
                                             </div>
                                         </div>
@@ -117,19 +204,29 @@
             <div class="md:pl-12 md:w-1/2">
                 <div class=space-y-8>
                     <div class=flex>
-                        <div class="flex items-center justify-center rounded-full h-12 w-12 flex-shrink-0 bg-red-100 text-red-600">❌</div>
+                        <div
+                            class="flex items-center justify-center rounded-full h-12 w-12 flex-shrink-0 bg-red-100 text-red-600">
+                            ❌</div>
                         <div class=ml-4>
                             <h3 class="font-semibold mb-2 text-lg">Lost in the noise of daily life</h3>
-                            <p class=text-slate-600>Studies show we forget 80% of pivotal moments within 2 years.</div>
+                            <p class=text-slate-600>Studies show we forget 80% of pivotal moments within 2 years.
+                        </div>
                     </div>
                     <div class=flex>
-                        <div class="flex items-center justify-center rounded-full h-12 w-12 flex-shrink-0 bg-green-100 text-green-600">✅</div>
+                        <div
+                            class="flex items-center justify-center rounded-full h-12 w-12 flex-shrink-0 bg-green-100 text-green-600">
+                            ✅</div>
                         <div class=ml-4>
                             <h3 class="font-semibold mb-2 text-lg">Lapse quietly connects the dots</h3>
-                            <p class=text-slate-600>Watch how your 'terrified' face becomes 'thriving' over time. Choose video for full expression or audio for quick thoughts.</p>
-                            <button class="flex items-center justify-center rounded-md bg-teal-500 cta-button font-medium py-3 shadow-md text-white px-8 mt-8 mt-8 sm:w-auto w-full">Save Your Story Now
-                                <svg class="h-5 w-5 ml-2" fill=none viewBox="0 0 24 24" stroke=currentColor xmlns=http://www.w3.org/2000/svg>
-                                    <path d="M9 5l7 7-7 7" stroke-linecap=round stroke-linejoin=round stroke-width=2></path>
+                            <p class=text-slate-600>Watch how your 'terrified' face becomes 'thriving' over time. Choose
+                                video for full expression or audio for quick thoughts.</p>
+                            <button
+                                class="flex items-center justify-center rounded-md bg-teal-500 cta-button font-medium py-3 shadow-md text-white px-8 mt-8 mt-8 sm:w-auto w-full">Save
+                                Your Story Now
+                                <svg class="h-5 w-5 ml-2" fill=none viewBox="0 0 24 24" stroke=currentColor
+                                    xmlns=http://www.w3.org/2000/svg>
+                                    <path d="M9 5l7 7-7 7" stroke-linecap=round stroke-linejoin=round stroke-width=2>
+                                    </path>
                                 </svg>
                             </button>
                         </div>
@@ -140,109 +237,122 @@
     </section>
     <section class="md:px-20 px-6 py-20 bg-slate-50" id=stories>
         <h2 class="mb-4 font-bold md:text-4xl text-3xl text-center">Don't Just Take Our Word For It</h2>
-        <p class="text-slate-600 text-lg mb-16 text-center">We don't do 'testimonials.' We call these Video Postcards From the Future.
-            <div class="grid gap-8 grid-cols-1 lg:grid-cols-3 md:grid-cols-2">
-                <div class="bg-white shadow-md rounded-xl hover:shadow-lg overflow-hidden transition-shadow">
-                    <div class="space-y-4 p-6">
-                        <div class="flex items-center justify-center rounded-md w-full bg-slate-100 h-20 mb-6 relative">
-                            <svg class="h-12 w-12 text-teal-500 absolute opacity-50" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M17,10.5V7A1,1 0 0,0 16,6H4A1,1 0 0,0 3,7V17A1,1 0 0,0 4,18H16A1,1 0 0,0 17,17V13.5L21,17.5V6.5L17,10.5Z" />
-                            </svg>
-                            <div class="flex space-x-1">
-                                <div class="rounded-full w-1 bg-teal-300 h-3"></div>
-                                <div class="rounded-full w-1 bg-teal-400 h-5"></div>
-                                <div class="rounded-full w-1 bg-teal-500 h-8"></div>
-                                <div class="rounded-full w-1 bg-teal-600 h-12"></div>
-                                <div class="rounded-full w-1 bg-teal-500 h-8"></div>
-                                <div class="rounded-full w-1 bg-teal-400 h-5"></div>
-                                <div class="rounded-full w-1 bg-teal-300 h-3"></div>
-                            </div>
-                        </div>
-                        <button class="flex items-center justify-center rounded-full border border-teal-500 hover:bg-teal-50 px-4 py-2 text-teal-500 transition-colors w-full">
-                            <svg class="h-5 w-5 mr-2" fill=currentColor viewBox="0 0 24 24">
-                                <path d=M8,5.14V19.14L19,12.14L8,5.14Z />
-                            </svg> Play Video</button>
-                        <div>
-                            <p class="text-slate-600 italic mb-4">"Seeing my nervous face when quitting my job... then watching myself two years later say, 'Best decision ever'? Chills."
-                                <div class="flex items-center">
-                                    <div class="flex items-center justify-center rounded-full h-10 w-10 bg-slate-200 font-semibold text-slate-600">A</div>
-                                    <div class=ml-3>
-                                        <p class=font-medium>Alex, 31
-                                            <p class="text-sm text-slate-500">Using Lapse for 2+ years</div>
-                                </div>
+        <p class="text-slate-600 text-lg mb-16 text-center">We don't do 'testimonials.' We call these Video Postcards
+            From the Future.
+        <div class="grid gap-8 grid-cols-1 lg:grid-cols-3 md:grid-cols-2">
+            <div class="bg-white shadow-md rounded-xl hover:shadow-lg overflow-hidden transition-shadow">
+                <div class="space-y-4 p-6">
+                    <div class="flex items-center justify-center rounded-md w-full bg-slate-100 h-36 mb-6 relative">
+
+                        <div class="flex space-x-1">
+                            <div class="rounded-full w-1 bg-teal-300 h-3"></div>
+                            <div class="rounded-full w-1 bg-teal-400 h-5"></div>
+                            <div class="rounded-full w-1 bg-teal-500 h-8"></div>
+                            <div class="rounded-full w-1 bg-teal-600 h-12"></div>
+                            <div class="rounded-full w-1 bg-teal-500 h-8"></div>
+                            <div class="rounded-full w-1 bg-teal-400 h-5"></div>
+                            <div class="rounded-full w-1 bg-teal-300 h-3"></div>
                         </div>
                     </div>
-                </div>
-                <div class="bg-white shadow-md rounded-xl hover:shadow-lg overflow-hidden transition-shadow">
-                    <div class="space-y-4 p-6">
-                        <div class="flex items-center justify-center rounded-md w-full bg-slate-100 h-20 mb-6 relative">
-                            <svg class="h-12 w-12 text-teal-500 absolute opacity-50" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M17,10.5V7A1,1 0 0,0 16,6H4A1,1 0 0,0 3,7V17A1,1 0 0,0 4,18H16A1,1 0 0,0 17,17V13.5L21,17.5V6.5L17,10.5Z" />
-                            </svg>
-                            <div class="flex space-x-1">
-                                <div class="rounded-full w-1 bg-teal-300 h-5"></div>
-                                <div class="rounded-full w-1 bg-teal-400 h-8"></div>
-                                <div class="rounded-full w-1 bg-teal-500 h-6"></div>
-                                <div class="rounded-full w-1 bg-teal-600 h-10"></div>
-                                <div class="rounded-full w-1 bg-teal-500 h-7"></div>
-                                <div class="rounded-full w-1 bg-teal-400 h-4"></div>
-                                <div class="rounded-full w-1 bg-teal-300 h-6"></div>
+                    <button
+                        class="flex items-center justify-center rounded-full border border-teal-500 hover:bg-teal-50 px-4 py-2 text-teal-500 transition-colors w-full">
+                        <svg class="h-5 w-5 mr-2" fill=currentColor viewBox="0 0 24 24">
+                            <path d=M8,5.14V19.14L19,12.14L8,5.14Z />
+                        </svg> Play Video</button>
+                    <div>
+                        <p class="text-slate-600 italic mb-4">"Seeing my nervous face when quitting my job... then
+                            watching myself two years later say, 'Best decision ever'? Chills."
+                        <div class="flex items-center">
+                            <div
+                                class="flex items-center justify-center rounded-full h-10 w-10 bg-slate-200 font-semibold text-slate-600">
+                                A</div>
+                            <div class=ml-3>
+                                <p class=font-medium>Alex, 31
+                                <p class="text-sm text-slate-500">Using Lapse for 2+ years
                             </div>
-                        </div>
-                        <button class="flex items-center justify-center rounded-full border border-teal-500 hover:bg-teal-50 px-4 py-2 text-teal-500 transition-colors w-full">
-                            <svg class="h-5 w-5 mr-2" fill=currentColor viewBox="0 0 24 24">
-                                <path d=M8,5.14V19.14L19,12.14L8,5.14Z />
-                            </svg> Play Video</button>
-                        <div>
-                            <p class="text-slate-600 italic mb-4">"We recorded our toddler's first steps in Lapse. Now we've got a 'greatest hits' reel for her 18th birthday."
-                                <div class="flex items-center">
-                                    <div class="flex items-center justify-center rounded-full h-10 w-10 bg-slate-200 font-semibold text-slate-600">R</div>
-                                    <div class=ml-3>
-                                        <p class=font-medium>The Rivera Family
-                                            <p class="text-sm text-slate-500">Parents & Lapse enthusiasts</div>
-                                </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-white shadow-md rounded-xl hover:shadow-lg overflow-hidden transition-shadow">
-                    <div class="space-y-4 p-6">
-                        <div class="flex items-center justify-center rounded-md w-full bg-slate-100 h-20 mb-6 relative">
-                            <svg class="h-12 w-12 text-teal-500 absolute opacity-50" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12,2A3,3 0 0,1 15,5V11A3,3 0 0,1 12,14A3,3 0 0,1 9,11V5A3,3 0 0,1 12,2Z" />
-                            </svg>
-                            <div class="flex space-x-1">
-                                <div class="rounded-full w-1 bg-teal-300 h-4"></div>
-                                <div class="rounded-full w-1 bg-teal-400 h-6"></div>
-                                <div class="rounded-full w-1 bg-teal-500 h-9"></div>
-                                <div class="rounded-full w-1 bg-teal-600 h-7"></div>
-                                <div class="rounded-full w-1 bg-teal-500 h-10"></div>
-                                <div class="rounded-full w-1 bg-teal-400 h-6"></div>
-                                <div class="rounded-full w-1 bg-teal-300 h-4"></div>
-                            </div>
-                        </div>
-                        <button class="flex items-center justify-center rounded-full border border-teal-500 hover:bg-teal-50 px-4 py-2 text-teal-500 transition-colors w-full">
-                            <svg class="h-5 w-5 mr-2" fill=currentColor viewBox="0 0 24 24">
-                                <path d=M8,5.14V19.14L19,12.14L8,5.14Z />
-                            </svg> Play Audio</button>
-                        <div>
-                            <p class="text-slate-600 italic mb-4">"I'm a therapist, and I recommend Lapse to clients. It's like a visual diary that offers playback and insights."
-                                <div class="flex items-center">
-                                    <div class="flex items-center justify-center rounded-full h-10 w-10 bg-slate-200 font-semibold text-slate-600">M</div>
-                                    <div class=ml-3>
-                                        <p class=font-medium>Dr. Maya, PhD
-                                            <p class="text-sm text-slate-500">Clinical Psychologist</div>
-                                </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="text-center mt-12">
-                <button class="flex items-center justify-center rounded-md bg-teal-500 cta-button font-medium py-3 shadow-md text-white px-8 mx-auto">Record Your First Postcard
-                    <svg class="h-5 w-5 ml-2" fill=none viewBox="0 0 24 24" stroke=currentColor xmlns=http://www.w3.org/2000/svg>
-                        <path d="M9 5l7 7-7 7" stroke-linecap=round stroke-linejoin=round stroke-width=2></path>
-                    </svg>
-                </button>
+            <div class="bg-white shadow-md rounded-xl hover:shadow-lg overflow-hidden transition-shadow">
+                <div class="space-y-4 p-6">
+                    <div class="flex items-center justify-center rounded-md w-full bg-slate-100 h-36 mb-6 relative">
+
+                        <div class="flex space-x-1">
+                            <div class="rounded-full w-1 bg-teal-300 h-5"></div>
+                            <div class="rounded-full w-1 bg-teal-400 h-8"></div>
+                            <div class="rounded-full w-1 bg-teal-500 h-6"></div>
+                            <div class="rounded-full w-1 bg-teal-600 h-10"></div>
+                            <div class="rounded-full w-1 bg-teal-500 h-7"></div>
+                            <div class="rounded-full w-1 bg-teal-400 h-4"></div>
+                            <div class="rounded-full w-1 bg-teal-300 h-6"></div>
+                        </div>
+                    </div>
+                    <button
+                        class="flex items-center justify-center rounded-full border border-teal-500 hover:bg-teal-50 px-4 py-2 text-teal-500 transition-colors w-full">
+                        <svg class="h-5 w-5 mr-2" fill=currentColor viewBox="0 0 24 24">
+                            <path d=M8,5.14V19.14L19,12.14L8,5.14Z />
+                        </svg> Play Video</button>
+                    <div>
+                        <p class="text-slate-600 italic mb-4">"We recorded our toddler's first steps in Lapse. Now we've
+                            got a 'greatest hits' reel for her 18th birthday."
+                        <div class="flex items-center">
+                            <div
+                                class="flex items-center justify-center rounded-full h-10 w-10 bg-slate-200 font-semibold text-slate-600">
+                                R</div>
+                            <div class=ml-3>
+                                <p class=font-medium>The Rivera Family
+                                <p class="text-sm text-slate-500">Parents & Lapse enthusiasts
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <div class="bg-white shadow-md rounded-xl hover:shadow-lg overflow-hidden transition-shadow">
+                <div class="space-y-4 p-6">
+                    <div class="flex items-center justify-center rounded-md w-full bg-slate-100 h-36 mb-6 relative">
+
+                        <div class="flex space-x-1">
+                            <div class="rounded-full w-1 bg-teal-300 h-4"></div>
+                            <div class="rounded-full w-1 bg-teal-400 h-6"></div>
+                            <div class="rounded-full w-1 bg-teal-500 h-9"></div>
+                            <div class="rounded-full w-1 bg-teal-600 h-7"></div>
+                            <div class="rounded-full w-1 bg-teal-500 h-10"></div>
+                            <div class="rounded-full w-1 bg-teal-400 h-6"></div>
+                            <div class="rounded-full w-1 bg-teal-300 h-4"></div>
+                        </div>
+                    </div>
+                    <button
+                        class="flex items-center justify-center rounded-full border border-teal-500 hover:bg-teal-50 px-4 py-2 text-teal-500 transition-colors w-full">
+                        <svg class="h-5 w-5 mr-2" fill=currentColor viewBox="0 0 24 24">
+                            <path d=M8,5.14V19.14L19,12.14L8,5.14Z />
+                        </svg> Play Audio</button>
+                    <div>
+                        <p class="text-slate-600 italic mb-4">"I'm a therapist, and I recommend Lapse to clients. It's
+                            like a visual diary that offers playback and insights."
+                        <div class="flex items-center">
+                            <div
+                                class="flex items-center justify-center rounded-full h-10 w-10 bg-slate-200 font-semibold text-slate-600">
+                                M</div>
+                            <div class=ml-3>
+                                <p class=font-medium>Dr. Maya, PhD
+                                <p class="text-sm text-slate-500">Clinical Psychologist
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-12">
+            <button
+                class="flex items-center justify-center rounded-md bg-teal-500 cta-button font-medium py-3 shadow-md text-white px-8 mx-auto">Record
+                Your First Postcard
+                <svg class="h-5 w-5 ml-2" fill=none viewBox="0 0 24 24" stroke=currentColor
+                    xmlns=http://www.w3.org/2000/svg>
+                    <path d="M9 5l7 7-7 7" stroke-linecap=round stroke-linejoin=round stroke-width=2></path>
+                </svg>
+            </button>
+        </div>
     </section>
     <section class="bg-white px-6 md:px-20 py-20" id=insights>
         <h2 class="text-center font-bold md:text-4xl text-3xl mb-16">What Will Your Future Self Remember?</h2>
@@ -253,32 +363,44 @@
                     <div class="flex items-center flex-col absolute top-10 left-[10%]">
                         <div class="rounded-full bg-teal-500 h-4 mb-2 w-4 z-10"></div>
                         <p class="text-sm font-medium mb-1">2019
-                            <div class="bg-white shadow-md p-4 border border-slate-200 mt-2 rounded-md w-56">
-                                <p class="text-sm text-slate-700">Your facial expressions showed <span class=font-semibold>anxiety</span> 12 times this year.</div>
+                        <div class="bg-white shadow-md p-4 border border-slate-200 mt-2 rounded-md w-56">
+                            <p class="text-sm text-slate-700">Your facial expressions showed <span
+                                    class=font-semibold>anxiety</span> 12 times this year.
+                        </div>
                     </div>
                     <div class="flex items-center flex-col absolute top-10 left-[40%]">
                         <div class="rounded-full bg-teal-500 h-4 mb-2 w-4 z-10"></div>
                         <p class="text-sm font-medium mb-1">2022
-                            <div class="bg-white shadow-md p-4 border border-slate-200 mt-2 rounded-md w-56">
-                                <p class="text-sm text-slate-700">First appearance of your <span class=font-semibold>partner</span> in your videos.</div>
+                        <div class="bg-white shadow-md p-4 border border-slate-200 mt-2 rounded-md w-56">
+                            <p class="text-sm text-slate-700">First appearance of your <span
+                                    class=font-semibold>partner</span> in your videos.
+                        </div>
                     </div>
                     <div class="flex items-center flex-col absolute top-10 left-[70%]">
                         <div class="rounded-full bg-teal-500 h-4 mb-2 w-4 z-10"></div>
                         <p class="text-sm font-medium mb-1">2024
-                            <div class="bg-white shadow-md p-4 border border-slate-200 mt-2 rounded-md w-56">
-                                <p class="text-sm text-slate-700">Confidence bloomed! <span class=font-semibold>Smiling</span> is now your most common expression.</div>
+                        <div class="bg-white shadow-md p-4 border border-slate-200 mt-2 rounded-md w-56">
+                            <p class="text-sm text-slate-700">Confidence bloomed! <span
+                                    class=font-semibold>Smiling</span> is now your most common expression.
+                        </div>
                     </div>
                     <div class="flex items-center flex-col absolute top-10 left-[100%]">
                         <div class="rounded-full mb-2 h-4 w-4 z-10 bg-slate-300"></div>
                         <p class="text-sm font-medium mb-1 text-slate-400">2026
-                            <div class="bg-white shadow-md p-4 border border-slate-200 mt-2 rounded-md w-56 blur-sm hover:blur-none transition-all">
-                                <p class="text-sm text-slate-700">Your 2026 self will laugh at your hairstyle… then thank you for recording it.</div>
+                        <div
+                            class="bg-white shadow-md p-4 border border-slate-200 mt-2 rounded-md w-56 blur-sm hover:blur-none transition-all">
+                            <p class="text-sm text-slate-700">Your 2026 self will laugh at your hairstyle… then thank
+                                you for recording it.
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="text-center bg-gradient-to-br from-teal-50 p-8 to-blue-50">
-                <button class="flex items-center justify-center rounded-md bg-teal-500 cta-button font-medium py-3 shadow-md text-white px-8 mx-auto">Uncover Your Patterns
-                    <svg class="h-5 w-5 ml-2" fill=none viewBox="0 0 24 24" stroke=currentColor xmlns=http://www.w3.org/2000/svg>
+                <button
+                    class="flex items-center justify-center rounded-md bg-teal-500 cta-button font-medium py-3 shadow-md text-white px-8 mx-auto">Uncover
+                    Your Patterns
+                    <svg class="h-5 w-5 ml-2" fill=none viewBox="0 0 24 24" stroke=currentColor
+                        xmlns=http://www.w3.org/2000/svg>
                         <path d="M9 5l7 7-7 7" stroke-linecap=round stroke-linejoin=round stroke-width=2></path>
                     </svg>
                 </button>
@@ -288,19 +410,24 @@
     </section>
     <section class="md:px-20 px-6 bg-slate-50 py-16">
         <div class="text-center mx-auto max-w-2xl">
-            <h2 class="font-bold md:text-4xl text-3xl mb-6">Pssst… Journals collect dust. This one plays back in HD.</h2>
-            <p class="text-slate-600 text-lg mb-10">Your growth is quieter than your fears. Let's amplify it with sight and sound.
-                <div class="bg-white shadow-md rounded-xl p-6">
-                    <p class="text-sm text-slate-500 mb-2">Create your first video or audio recording:
-                        <div class="flex items-center">
-                            <input class="border-2 border-teal-200 flex-grow focus:border-transparent focus:outline-none focus:ring-2 focus:ring-teal-500 p-3 rounded-l-md" placeholder="First day at my new job 🎥">
-                            <button class="transition-colors p-3 bg-teal-500 hover:bg-teal-600 rounded-r-md text-white">
-                                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M17,10.5V7A1,1 0 0,0 16,6H4A1,1 0 0,0 3,7V17A1,1 0 0,0 4,18H16A1,1 0 0,0 17,17V13.5L21,17.5V6.5L17,10.5Z" />
-                                </svg>
-                            </button>
-                        </div>
+            <h2 class="font-bold md:text-4xl text-3xl mb-6">Pssst… Journals collect dust. This one plays back in HD.
+            </h2>
+            <p class="text-slate-600 text-lg mb-10">Your growth is quieter than your fears. Let's amplify it with sight
+                and sound.
+            <div class="bg-white shadow-md rounded-xl p-6">
+                <p class="text-sm text-slate-500 mb-2">Create your first video or audio recording:
+                <div class="flex items-center">
+                    <input
+                        class="border-2 border-teal-200 flex-grow focus:border-transparent focus:outline-none focus:ring-2 focus:ring-teal-500 p-3 rounded-l-md"
+                        placeholder="First day at my new job 🎥">
+                    <button class="transition-colors p-3 bg-teal-500 hover:bg-teal-600 rounded-r-md text-white">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M17,10.5V7A1,1 0 0,0 16,6H4A1,1 0 0,0 3,7V17A1,1 0 0,0 4,18H16A1,1 0 0,0 17,17V13.5L21,17.5V6.5L17,10.5Z" />
+                        </svg>
+                    </button>
                 </div>
+            </div>
         </div>
     </section>
     <!-- Scarcity & Social Proof -->
@@ -308,10 +435,9 @@
         <div class="max-w-3xl mx-auto">
             <div class="bg-gradient-to-br from-slate-50 to-slate-100 p-8 md:p-12 rounded-2xl shadow-lg">
                 <h2 class="text-2xl md:text-3xl font-bold mb-8 text-center">
-                Join 892 Life Captains <br /><span class="text-teal-500"
-                    >(Only 108 Free Slots Left This Month)</span
-                >
-            </h2>
+                    Join 892 Life Captains <br /><span class="text-teal-500">(Only 108 Free Slots Left This
+                        Month)</span>
+                </h2>
 
                 <div class="flex flex-col md:flex-row justify-between items-center mb-10">
                     <div class="bg-white p-4 rounded-lg shadow-md mb-6 md:mb-0 flex items-center space-x-3">
@@ -323,139 +449,116 @@
 
                     <div class="bg-white p-4 rounded-lg shadow-md flex items-center space-x-3">
                         <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z" />
+                            <path
+                                d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z" />
                         </svg>
                         <p class="text-sm font-medium">
                             Claim within
-                            <span id="countdown-timer" class="text-red-500 font-bold">4:32</span
-                        >
-                        → Get 3 bonus credits!
-                    </p>
-                </div>
-            </div>
-
-            <div class="text-center">
-                <button
-                    class="cta-button px-8 py-4 bg-teal-500 text-white rounded-md font-medium shadow-md inline-flex items-center"
-                >
-                    Claim Your Spot Now
-                    <svg
-                        class="ml-2 w-5 h-5"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M9 5l7 7-7 7"
-                        ></path>
-                    </svg>
-                </button>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Trust & Privacy -->
-<section class="py-16 px-6 md:px-20 bg-slate-50">
-    <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">
-            Your Secrets Stay Yours. Pinky Promise.
-        </h2>
-        <p class="text-lg text-slate-600 mb-12 max-w-2xl mx-auto">
-            We take your privacy seriously - your memories are encrypted
-            and only accessible to you.
-        </p>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            <div
-                class="bg-white p-6 rounded-xl shadow-md transition-transform hover:transform hover:scale-105"
-            >
-                <div class="text-4xl mb-4">🔒</div>
-                <h3 class="text-xl font-semibold mb-2">
-                    Bank-level encryption
-                </h3>
-                <p class="text-slate-600">
-                    Your voice notes are encrypted using the same
-                    technology used by financial institutions.
-                </p>
-            </div>
-
-            <div
-                class="bg-white p-6 rounded-xl shadow-md transition-transform hover:transform hover:scale-105"
-            >
-                <div class="text-4xl mb-4">🎧</div>
-                <h3 class="text-xl font-semibold mb-2">
-                    Private until YOU hit share
-                </h3>
-                <p class="text-slate-600">
-                    You control who hears what. Share specific memories,
-                    or keep them all to yourself.
-                </p>
-            </div>
-
-            <div
-                class="bg-white p-6 rounded-xl shadow-md transition-transform hover:transform hover:scale-105"
-            >
-                <div class="text-4xl mb-4">🤝</div>
-                <h3 class="text-xl font-semibold mb-2">
-                    No data selling, ever
-                </h3>
-                <p class="text-slate-600">
-                    We don't sell your data or use it for advertising.
-                    Your memories belong only to you.
-                </p>
-            </div>
-        </div>
-
-        <div
-            class="bg-white p-8 rounded-xl shadow-md max-w-2xl mx-auto"
-        >
-            <div class="flex items-start">
-                <div class="flex-shrink-0">
-                    <div
-                        class="w-12 h-12 rounded-full bg-teal-100 flex items-center justify-center"
-                    >
-                        <svg
-                            class="w-6 h-6 text-teal-600"
-                            fill="currentColor"
-                            viewBox="0 0 24 24"
-                        >
-                            <path
-                                d="M19,3H5C3.9,3 3,3.9 3,5V19C3,20.1 3.9,21 5,21H19C20.1,21 21,20.1 21,19V5C21,3.9 20.1,3 19,3M19,19H5V5H19V19M17,12C17,14.76 14.76,17 12,17C9.24,17 7,14.76 7,12C7,9.24 9.24,7 12,7C12.86,7 13.66,7.24 14.36,7.65L15.41,6.6C14.38,5.93 13.23,5.5 12,5.5C8.42,5.5 5.5,8.42 5.5,12C5.5,15.58 8.42,18.5 12,18.5C15.58,18.5 18.5,15.58 18.5,12H17M16.5,7.5L18,9L16.5,10.5V7.5Z"
-                            />
-                        </svg>
+                            <span id="countdown-timer" class="text-red-500 font-bold">4:32</span>
+                            → Get 3 bonus credits!
+                        </p>
                     </div>
                 </div>
-                <div class="ml-4">
-                    <p class="italic text-slate-700 mb-4">
-                        "I'm a therapist, and I recommend Lapse to
-                        clients. It's like a diary that listens back.
-                        The privacy features give my clients peace of
-                        mind that their thoughts are protected."
+
+                <div class="text-center">
+                    <button
+                        class="cta-button px-8 py-4 bg-teal-500 text-white rounded-md font-medium shadow-md inline-flex items-center">
+                        Claim Your Spot Now
+                        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Privacy -->
+    <section class="py-16 px-6 md:px-20 bg-slate-50">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                Your Secrets Stay Yours. Pinky Promise.
+            </h2>
+            <p class="text-lg text-slate-600 mb-12 max-w-2xl mx-auto">
+                We take your privacy seriously - your memories are encrypted
+                and only accessible to you.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-white p-6 rounded-xl shadow-md transition-transform hover:transform hover:scale-105">
+                    <div class="text-4xl mb-4">🔒</div>
+                    <h3 class="text-xl font-semibold mb-2">
+                        Bank-level encryption
+                    </h3>
+                    <p class="text-slate-600">
+                        Your voice notes are encrypted using the same
+                        technology used by financial institutions.
                     </p>
-                    <div class="flex items-center">
-                        <p class="font-medium">Dr. Maya, PhD</p>
-                        <span class="mx-2 text-slate-300">|</span>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md transition-transform hover:transform hover:scale-105">
+                    <div class="text-4xl mb-4">🎧</div>
+                    <h3 class="text-xl font-semibold mb-2">
+                        Private until YOU hit share
+                    </h3>
+                    <p class="text-slate-600">
+                        You control who hears what. Share specific memories,
+                        or keep them all to yourself.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md transition-transform hover:transform hover:scale-105">
+                    <div class="text-4xl mb-4">🤝</div>
+                    <h3 class="text-xl font-semibold mb-2">
+                        No data selling, ever
+                    </h3>
+                    <p class="text-slate-600">
+                        We don't sell your data or use it for advertising.
+                        Your memories belong only to you.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-xl shadow-md max-w-2xl mx-auto">
+                <div class="flex items-start">
+                    <div class="flex-shrink-0">
+                        <div class="w-12 h-12 rounded-full bg-teal-100 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-teal-600" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M19,3H5C3.9,3 3,3.9 3,5V19C3,20.1 3.9,21 5,21H19C20.1,21 21,20.1 21,19V5C21,3.9 20.1,3 19,3M19,19H5V5H19V19M17,12C17,14.76 14.76,17 12,17C9.24,17 7,14.76 7,12C7,9.24 9.24,7 12,7C12.86,7 13.66,7.24 14.36,7.65L15.41,6.6C14.38,5.93 13.23,5.5 12,5.5C8.42,5.5 5.5,8.42 5.5,12C5.5,15.58 8.42,18.5 12,18.5C15.58,18.5 18.5,15.58 18.5,12H17M16.5,7.5L18,9L16.5,10.5V7.5Z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="ml-4">
+                        <p class="italic text-slate-700 mb-4">
+                            "I'm a therapist, and I recommend Lapse to
+                            clients. It's like a diary that listens back.
+                            The privacy features give my clients peace of
+                            mind that their thoughts are protected."
+                        </p>
+                        <div class="flex items-center">
+                            <p class="font-medium">Dr. Maya, PhD</p>
+                            <span class="mx-2 text-slate-300">|</span>
                             <p class="text-sm text-slate-500">
                                 Clinical Psychologist
                             </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="mt-12">
-            <button class="cta-button px-8 py-3 bg-teal-500 text-white rounded-md font-medium shadow-md flex items-center justify-center mx-auto">
-                Start Your Private Journey
-                <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                </svg>
-            </button>
-        </div>
+            <div class="mt-12">
+                <button
+                    class="cta-button px-8 py-3 bg-teal-500 text-white rounded-md font-medium shadow-md flex items-center justify-center mx-auto">
+                    Start Your Private Journey
+                    <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>
         </div>
     </section>
 
@@ -466,8 +569,8 @@
                 <div>
                     <div class="flex items-center space-x-2 mb-6">
                         <svg class="w-8 h-8 text-teal-400" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12A6,6 0 0,0 12,6M12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8Z"
-                            />
+                            <path
+                                d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12A6,6 0 0,0 12,6M12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8Z" />
                         </svg>
                         <span class="text-xl font-semibold">Lapse</span>
                     </div>
@@ -477,234 +580,152 @@
                     <div class="flex space-x-4">
                         <a href="#" class="text-slate-400 hover:text-white transition-colors">
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z"
-                                />
+                                <path
+                                    d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z" />
                             </svg>
                         </a>
                         <a href="#" class="text-slate-400 hover:text-white transition-colors">
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z"
-                                />
+                                <path
+                                    d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z" />
                             </svg>
                         </a>
                         <a href="#" class="text-slate-400 hover:text-white transition-colors">
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"
-                                />
+                                <path
+                                    d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" />
                             </svg>
                         </a>
                     </div>
                 </div>
 
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Product</h3>
+                <div class=" text-slate-300">
+                    <h3 class="text-lg text-white font-semibold mb-4">Product</h3>
                     <ul class="space-y-2">
                         <li>
-                            <a href="#" class="text-slate-400 hover:text-white transition-colors">Features</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="#"
-                            class="text-slate-400 hover:text-white transition-colors"
-                            >Pricing</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="#"
-                            class="text-slate-400 hover:text-white transition-colors"
-                            >Voice Analytics</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="#"
-                            class="text-slate-400 hover:text-white transition-colors"
-                            >Mobile App</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="#"
-                            class="text-slate-400 hover:text-white transition-colors"
-                            >Integration</a
-                        >
-                    </li>
-                </ul>
+                            <a href="#" class="text-slate-300 hover:text-white transition-colors ">Features</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-slate-300 hover:text-white transition-colors">Pricing</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-slate-300 hover:text-white transition-colors">Voice Analytics</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-slate-300 hover:text-white transition-colors">Mobile App</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-slate-300 hover:text-white transition-colors">Integration</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class=" text-slate-300">
+                    <h3 class="text-lg text-white font-semibold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="#" class="text-slate-300 hover:text-white transition-colors">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-slate-300 hover:text-white transition-colors">Blog</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-slate-300 hover:text-white transition-colors">Careers</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-slate-300 hover:text-white transition-colors">Press Kit</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-slate-300 hover:text-white transition-colors">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class=" text-slate-300">
+                    <h3 class="text-lg text-white font-semibold mb-4">Support</h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="#" class="text-slate-300 hover:text-white transition-colors">Help Center</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-slate-300 hover:text-white transition-colors">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-slate-300 hover:text-white transition-colors">Terms of Service</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-slate-300 hover:text-white transition-colors">Cookie Policy</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-slate-300 hover:text-white transition-colors">Status</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
 
-            <div>
-                <h3 class="text-lg font-semibold mb-4">Company</h3>
-                <ul class="space-y-2">
-                    <li>
-                        <a
-                            href="#"
-                            class="text-slate-400 hover:text-white transition-colors"
-                            >About Us</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="#"
-                            class="text-slate-400 hover:text-white transition-colors"
-                            >Blog</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="#"
-                            class="text-slate-400 hover:text-white transition-colors"
-                            >Careers</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="#"
-                            class="text-slate-400 hover:text-white transition-colors"
-                            >Press Kit</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="#"
-                            class="text-slate-400 hover:text-white transition-colors"
-                            >Contact</a
-                        >
-                    </li>
-                </ul>
-            </div>
-
-            <div>
-                <h3 class="text-lg font-semibold mb-4">Support</h3>
-                <ul class="space-y-2">
-                    <li>
-                        <a
-                            href="#"
-                            class="text-slate-400 hover:text-white transition-colors"
-                            >Help Center</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="#"
-                            class="text-slate-400 hover:text-white transition-colors"
-                            >Privacy Policy</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="#"
-                            class="text-slate-400 hover:text-white transition-colors"
-                            >Terms of Service</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="#"
-                            class="text-slate-400 hover:text-white transition-colors"
-                            >Cookie Policy</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="#"
-                            class="text-slate-400 hover:text-white transition-colors"
-                            >Status</a
-                        >
-                    </li>
-                </ul>
+            <div class="pt-8 mt-8 border-t border-slate-700 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-slate-300 text-sm mb-4 md:mb-0">
+                    © 2025 Lapse. All rights reserved.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-slate-300 hover:text-white text-sm ">Privacy</a>
+                    <a href="#" class="text-slate-300 hover:text-white text-sm transition-colors">Terms</a>
+                    <a href="#" class="text-slate-300 hover:text-white text-sm transition-colors">Cookies</a>
+                </div>
             </div>
         </div>
+    </footer>
 
-        <div
-            class="pt-8 mt-8 border-t border-slate-700 flex flex-col md:flex-row justify-between items-center"
-        >
-            <p class="text-slate-400 text-sm mb-4 md:mb-0">
-                © 2025 Lapse. All rights reserved.
-            </p>
-            <div class="flex space-x-6">
-                <a
-                    href="#"
-                    class="text-slate-400 hover:text-white text-sm transition-colors"
-                    >Privacy</a
-                >
-                <a
-                    href="#"
-                    class="text-slate-400 hover:text-white text-sm transition-colors"
-                    >Terms</a
-                >
-                <a
-                    href="#"
-                    class="text-slate-400 hover:text-white text-sm transition-colors"
-                    >Cookies</a
-                >
-            </div>
-        </div>
+    <!-- Sticky Footer CTA -->
+    <div class="fixed bottom-0 left-0 right-0 bg-white shadow-lg py-4 px-6 flex items-center justify-between z-40">
+        <p class="text-slate-700 hidden md:block">
+            Don't keep future you waiting. They're rooting for you.
+        </p>
+        <button
+            class="cta-button w-full md:w-auto px-6 py-3 bg-teal-500 text-white rounded-md font-medium shadow-md flex items-center justify-center ml-auto">
+            Record Your First Note
+            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span class="ml-1 text-sm">2 mins ⏰</span>
+        </button>
     </div>
-</footer>
 
-<!-- Sticky Footer CTA -->
-<div
-    class="fixed bottom-0 left-0 right-0 bg-white shadow-lg py-4 px-6 flex items-center justify-between z-40"
->
-    <p class="text-slate-700 hidden md:block">
-        Don't keep future you waiting. They're rooting for you.
-    </p>
-    <button
-        class="cta-button w-full md:w-auto px-6 py-3 bg-teal-500 text-white rounded-md font-medium shadow-md flex items-center justify-center ml-auto"
-    >
-        Record Your First Note
-        <svg
-            class="ml-2 w-5 h-5"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-        >
-            <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-            ></path>
-        </svg>
-        <span class="ml-1 text-sm">2 mins ⏰</span>
-    </button>
-</div>
+    <!-- JavaScript -->
+    <script>
+        // Simulate countdown timer
+        let seconds = 272; // 4:32 in seconds
+        const countdownEl = document.getElementById("countdown-timer");
 
-<!-- JavaScript -->
-<script>
-    // Simulate countdown timer
-    let seconds = 272; // 4:32 in seconds
-    const countdownEl = document.getElementById("countdown-timer");
-
-    function updateCountdown() {
-        const mins = Math.floor(seconds / 60);
-        const secs = seconds % 60;
-        countdownEl.textContent = `${mins}:${secs
-            .toString()
-            .padStart(2, "0")}`;
-        if (seconds > 0) {
-            seconds--;
-            setTimeout(updateCountdown, 1000);
-        } else {
-            countdownEl.textContent = "Expired";
+        function updateCountdown() {
+            const mins = Math.floor(seconds / 60);
+            const secs = seconds % 60;
+            countdownEl.textContent = `${mins}:${secs
+                .toString()
+                .padStart(2, "0")}`;
+            if (seconds > 0) {
+                seconds--;
+                setTimeout(updateCountdown, 1000);
+            } else {
+                countdownEl.textContent = "Expired";
+            }
         }
-    }
 
-    // Simulate recent joins
-    function updateRecentJoins() {
-        const joinsEl = document.getElementById("recent-joins");
-        const currentJoins = parseInt(joinsEl.textContent);
-        const randomChange = Math.random() > 0.7 ? 1 : 0; // 30% chance of increasing
-        joinsEl.textContent = currentJoins + randomChange;
-        setTimeout(updateRecentJoins, 60000); // Update every minute
-    }
+        // Simulate recent joins
+        function updateRecentJoins() {
+            const joinsEl = document.getElementById("recent-joins");
+            const currentJoins = parseInt(joinsEl.textContent);
+            const randomChange = Math.random() > 0.7 ? 1 : 0; // 30% chance of increasing
+            joinsEl.textContent = currentJoins + randomChange;
+            setTimeout(updateRecentJoins, 60000); // Update every minute
+        }
 
-    // Start the updates
-    updateCountdown();
-    updateRecentJoins();
-</script>
+        // Start the updates
+        updateCountdown();
+        updateRecentJoins();
+    </script>
 </body>
+
 </html>
